@@ -1,23 +1,22 @@
 import * as React from "react"
 
-import {Header, ActionMenu, ActionList, IconButton} from '@primer/react'
-import {KebabHorizontalIcon} from '@primer/styled-octicons'
+import {Header, ActionMenu, ActionList, IconButton, Avatar} from '@primer/react'
+import {PlusIcon} from '@primer/styled-octicons'
 
 export default () => (
     <Header>
     
     <Header.Item>
         <Header.Link href="#" sx={{fontSize:2}}>
-            <span>Stockastix</span>
+            <span>Sitename</span>
         </Header.Link>
     </Header.Item>
 
-    <Header.Item full>Menu</Header.Item>
+    {/* <Header.Item full>Menu</Header.Item> */}
 
     <Header.Item>
       <ActionMenu>
-        <ActionMenu.Button>New</ActionMenu.Button>
-        <IconButton icon={KebabHorizontalIcon} variant="invisible" aria-label="Open column options" />
+        <ActionMenu.Button><IconButton icon={PlusIcon} variant="invisible" aria-label="Open column options" /></ActionMenu.Button>
 
         <ActionMenu.Overlay>
             <ActionList>
@@ -31,5 +30,7 @@ export default () => (
       </ActionMenu>
     </Header.Item>
 
+    <Header.Item><Avatar src="https://avatars.githubusercontent.com/primer" /></Header.Item>
+    
     </Header>
   )

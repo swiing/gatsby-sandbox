@@ -1,8 +1,10 @@
 import * as React from "react"
 
 import {Box, Button, ButtonGroup, Heading, TabNav, Text} from '@primer/react'
+import {UnderlineNav} from '@primer/react/drafts'
 
 import Layout from '../components/layout'
+import { CodeIcon, CommentDiscussionIcon, EyeIcon, GitPullRequestIcon, IssueOpenedIcon } from "@primer/styled-octicons"
 
 export default () => (
   <Layout>
@@ -26,7 +28,26 @@ export default () => (
         <Button>Button 3</Button>
       </ButtonGroup>
 
-      <Text sx={{color: "red"}} contenteditable="true"> Some text2 <span>data</span></Text>
+      <Text sx={{color: "red"}} > Some text2 <span>data</span></Text>
+
+      <UnderlineNav aria-label="Repository">
+  <UnderlineNav.Item aria-current="page" icon={CodeIcon}>
+    Code
+  </UnderlineNav.Item>
+  <UnderlineNav.Item icon={IssueOpenedIcon} counter={30}>
+    Issues
+  </UnderlineNav.Item>
+  <UnderlineNav.Item icon={GitPullRequestIcon} counter={3}>
+    Pull Requests
+  </UnderlineNav.Item>
+  <UnderlineNav.Item icon={CommentDiscussionIcon}>Discussions</UnderlineNav.Item>
+  <UnderlineNav.Item icon={EyeIcon} counter={9}>
+    Actions
+  </UnderlineNav.Item>
+  <UnderlineNav.Item icon={EyeIcon} counter={7}>
+    Projects
+  </UnderlineNav.Item>
+</UnderlineNav>      
 
     </Box>
   </Layout>
