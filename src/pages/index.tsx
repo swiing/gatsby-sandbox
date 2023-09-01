@@ -18,8 +18,12 @@ export default () => {
 
     <Nav></Nav>
 
-    {/* <PencilIcon /> */}
-    <IconButton icon={PencilIcon} aria-label="Edit" onClick={()=>alert('edit')}/>
+    <Box m={4} sx={{display: "flex", flexDirection: "row-reverse"}}>
+      <Button variant="primary">Draw</Button>
+      {/* <PencilIcon /> */}
+      <IconButton icon={PencilIcon} aria-label="Edit" onClick={()=>alert('edit')}/>
+
+    </Box>
 
 {/* Use BorderBox if ever available in React */}
     <Box m={4} sx={{
